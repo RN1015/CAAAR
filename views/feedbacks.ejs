@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Feedback</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 20px;
+		}
+		th, td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<h1>User Feedback</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>User mail id</th>
+				<th>Feedback</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for (let i = 0; i<result.length; i++) { %>
+			<tr>
+				<td><%= result[i].email%></td>
+				<td><%= result[i].userfeedback%></td>
+			</tr>
+			<% } %>
+		</tbody>
+	</table>
+</body>
+</html>

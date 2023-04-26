@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main_left">
+            <img src="https://www.pinclipart.com/picdir/big/124-1244578_user-login-man-human-body-mobile-person-comments.png" alt="human icon" style="height: 120px;" class="admin_icon">
+            <center><h1 style="font-size: 22px; margin-top:15px;color:white;">ADMIN</h1></center>
+            <hr style="margin-top: 25px; margin-bottom:10px;">
+
+            <h1 style="font-size: 22px; margin-top:20px;color:white;"><a href="/admin">Admin  Dashboard</a></h1>
+            <hr style="margin-top: 25px; margin-bottom:10px;">
+
+            <h1 style="font-size: 22px; margin-top:20px;color:white;"><a href="/userdetails">Customer Details</a></h1>
+            <hr style="margin-top: 25px; margin-bottom:10px;">
+            
+            <h1 style="font-size: 22px;margin-top:20px;color:white;"><a href="/hoteldetails">Hotel Details</a></h1>
+            <hr style="margin-top: 25px; margin-bottom:10px;">
+            
+            <h1 style="font-size: 22px;margin-top:20px;color:white;"><a href="/guidedetails">Guide Details</a></h1>
+            <hr style="margin-top: 25px; margin-bottom:10px;">
+            
+            <h1 style="font-size: 22px;margin-top:20px;color:white;"><a href="/agencydetails">Travel Agency Details</a></h1>
+            <hr style="margin-top: 25px; margin-bottom:10px;">
+
+            <h1 style="font-size: 22px;margin-top:20px;color:white;"><a href="/feedbacks">Feedbacks</a></h1>
+            <hr style="margin-top: 25px; margin-bottom:10px;">
+            <div class="logout">
+                <h1 style="font-size: 22px;margin-top:20px;padding-top:40px;"><a href="/adminlogout"><button class="button" style="cursor:pointer">Logout</button></a></h1>
+            </div>
+        </div>
+        <div>
+        <div class="main_right">
+            <div class="welcome">
+                <div class="welocme_left"></div>
+                <div class="welcome_right">
+                  <h1>Welcome <span style="font-family:'Times New Roman', Times, serif;">ADMIN</span></h1>
+                </div>
+            </div>
+            <div style="display: flex;" class="main_right1">
+                <div class="stat-card">
+                    <div class="card-info">
+                        <h3 style="font-size: 25px;">Customer Count</h3>
+                    </div>
+                    <div class="card-icon">
+                        <center><img src="https://img.icons8.com/wired/64/000000/user-male-circle.png" style="height: 80px;"/></center>
+                    </div>
+                    <center><p style="font-size: 25px;font-weight:bold"><%= cc.length %></p></center>
+                </div>
+                <div class="stat-card" >
+                    <div class="card-info">
+                        <h3 style="font-size: 25px;">Hotel Count</h3>
+                    </div>
+                    <div class="card-icon">
+                        <center><img src="https://freepngimg.com/thumb/hotel/33331-8-hotel-picture.png" style="height: 80px;"/></center>
+                    </div>
+                    <center><p style="font-size: 25px;font-weight:bold"><%= hc.length %></p></center>
+                </div>
+                <div class="stat-card">
+                    <div class="card-info">
+                        <h3 style="font-size: 25px;">Guide Count</h3>
+                    </div>
+                    <div class="card-icon">
+                        <center><img src="https://icon-library.com/images/tour-guide-icon/tour-guide-icon-1.jpg" style="height: 80px;"/></center>
+                    </div>
+                    <center><p style="font-size: 25px;font-weight:bold"><%= gc.length %></p></center>
+                </div>
+                <div class="stat-card">
+                    <div class="card-info">
+                        <h3 style="font-size: 25px;">Travel Agency Count</h3>
+                    </div>
+                    <div class="card-icon">
+                        <center><img src="https://img.icons8.com/material-rounded/80/000000/travel-agency.png" style="height: 80px;"/></center>
+                    </div>
+                    <center><p style="font-size: 25px;font-weight:bold"><%= tc.length %></p></center>
+                </div>
+            </div>
+        </div>
+        <form action="#" method="post">
+            <h1>Make Public Announcement</h1>
+              
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+              
+              <input type="submit" value="Create Announcement">
+        </form>
+        </div>
+    </div>
+</body>
+</html>

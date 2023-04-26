@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+<body>
+	<div class="logout">
+		<a href="/guidelogout"><button class="button" style="cursor:pointer">Logout</button></a>
+	</div>
+	<div class="welcome">
+		<div class="welocme_left"></div>
+		<div class="welcome_right">
+		  <h1>Welcome <span style="font-family:'Times New Roman', Times, serif;"><%= name %></span></h1>
+		</div>
+	</div>
+	
+		<form action="/guidedashboard" method="post">
+			<div class="content">
+				<div class="main">
+					<div class="content_left"><br>
+						<label for="">NAME</label><br>
+						<input type="text" name="guidename" value= <%= name %>><br>
+						<label for="">DATE OF BIRTH</label><br>
+						<input type="date" name="gdob" value= <%= dob %>><br>
+						<label for="">E-mail</label><br>
+						<input type="mail" name="gemail" value= <%= mail %>><br>
+						
+					</div>
+					<div class="content_right"><br>
+						<label for="">Languages</label><br>
+						<input type="text" name="guidelanguage" value= <%= lang %>><br>
+						<label for="">Place</label><br>
+						<input type="text" name="location" value= <%= loc %>><br>
+						<label for="">Contact</label><br>
+						<input type="text" name="phoneno" value= <%= phoneno %>><br>
+					</div>
+				</div>
+				<button type="submit" class="submit">Edit</button>
+			</div>
+		</form>
+	
+	<div class="container">
+			<div class="header">
+				<h1>Dashboard</h1>
+			  </div>
+	   <div class="main1">
+				<center><div class="card" style="height: auto; align-items: center;">
+				  <center><h1>Your Booking</h1></center><hr>
+				  <% for(let i=0;i<result.length;i++) { %>
+					<P><u>USER</u></P>
+					<p><%= result[i].username %></p>
+					<p><%= result[i].email %></p>
+					<p><%= result[i].booking[0].date %></p>
+					<div class="card1" style="margin-bottom: 5px;">
+						<p class="AD">
+							<form action="/guidedashboard" method="post">
+							<center><button type="submit" value="accept" class="accept">Accept</button></center><br>
+							</form>
+					  	</p>
+						<hr>
+					</div>
+				  <% } %>
+				</div></center>
+		</div>
+	</div>
+	<script>
+        const decline = document.querySelectorAll('.decline')
+        for(let i=0;i<block.length;i++){
+        decline[i].addEventListener('click',function(){
+            let b = block[i].parentElement.parentElement.parentElement.querySelector("h3").innerText
+            if(confirm("Do you want to remove the travel agency?")){
+            let Details = {
+                email : b
+            }
+            fetch("/removeagency",
+                    {
+                        method: "POST",
+                        headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(Details)
+                    })
+                    block[i].parentElement.parentElement.parentElement.parentElement.remove()
+                }
+        })
+        }
+    </script>
+
+
+
+</body>
+</html>

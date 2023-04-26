@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login_reg_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>User Login</title>
+    <script src="https://kit.fontawesome.com/cf17d1b09a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <video src="../CSS/video.mp4" autoplay loop muted playsinline class="video-background"></video>
+    <div class="box">
+        <div class = "container" >
+            <div class="top-header">
+                <header style="font-size:4.2rem;"> Pack<span style="color: rgb(214, 152, 18); font-size: 4.2rem; font-weight: 50;">UrBags</span></header>
+                <br> 
+                <header>Login as User</header>
+                <br>
+            </div> 
+
+            <form id="form" class="form"  method="post" action="/Login">
+                <div class="input-field">
+                    <input type="email" class="input" placeholder="Email" required name="email">
+                    <i class="fa-solid fa-envelope" style="width: 5%;"></i>
+                </div> 
+
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Password" required name="pwd">
+                    <small><span><%= sn %></span></small>
+                    <i class="fa-solid fa-lock"></i>
+                </div> 
+
+                <div class="input-field">
+                    <a href="/Login"><input type="submit" class="submit btn" value="Login"></a>
+                    
+                </div>
+
+                <div class="bottom">
+                    <div class="left">
+                        <input type="checkbox" id="check">
+                        <label for="check"><a href="/register">New to pyb!click here</a></label>
+                    </div>
+                    <!-- <div class="right">
+                        <label><a href="#">Forgot Password</a></label>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login_reg_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Register</title>
+    <script src="https://kit.fontawesome.com/cf17d1b09a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1></h1>
+    <video src="../CSS/video.mp4" autoplay loop muted playsinline class="video-background"></video>
+    <div class="box">
+        <div class = "container" >
+            <div class="top-header">
+                <header style="font-size:4.2rem;"> Pack<span style="color: rgb(214, 152, 18); font-size: 4.2rem; font-weight: 50;">UrBags</span></header>
+                <br><br>
+                <header>Register</header>
+                <br>
+            </div> 
+
+            <form id="form" class="form" action="/register"  method="post">
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Username" required id = "Username" name="Username">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Phone No" required id = "Phone" name="Phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="email" class="input" placeholder="Email" required id = "email" name="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <small><span><%= ev %></span></small>
+                </div> 
+
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Set Password" required id = "password" name="pwd">
+                    <i class="fa-solid fa-lock"></i>
+                    <small><span><%= ep %></span></small>
+                </div> 
+
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Confirm Password" required id = "passwordConfirm" name="cpwd">
+                    <i class="fa-solid fa-lock"></i>
+                    <small><span><%= cep %></span></small>
+
+                </div>
+
+                <div class="input-field">
+                    <div class="input-field1">
+                        <button type="submit" class="submit" value="Register">Register</button>
+                        <button type="button" class="submit" value="Login" onclick="onClick1()">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function onClick1() {
+            var url = "/Login"
+            window.location.href = url;
+        }
+    </script>
+    <!-- <script src="../register.js"></script> -->
+</body>
+</html>

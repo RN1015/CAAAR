@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	margin: 0;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+.radio-group {
+	margin: 10px 0;
+}
+radio {
+    margin: 10px 0;
+}
+label {
+	display: block;
+	padding-left: 30px;
+	position: relative;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+input[type="radio"] {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+input[type="radio"]:checked + label:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: #0077be;
+}
+
+input[type="radio"]:focus + label:before {
+	box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.2);
+}
+
+/* Specific Styles */
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	padding: 20px;
+}
+
+section.selection-box {
+	box-sizing: border-box;
+	flex-basis: calc(100% / 3 - 40px);
+	max-width: calc(100% / 3 - 40px);
+	background-color: #f7f7f7;
+	padding: 20px;
+	margin: 20px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+}
+
+section.selection-box h2 {
+	margin-bottom: 20px;
+}
+
+footer p {
+	margin: 0;
+}
+.forsearch{
+    display: flex;
+    margin: auto;
+    margin: 80px 0px 30px 400px;
+}
+.forsearch h1{
+    margin-right: 70px;
+    font-size: 30px;
+}
+.forsearch input{
+    margin-top: 0px;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    border: 3px solid;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.upi{
+    margin: auto;
+    margin-left: 500px;
+    margin-top: 60px;
+
+}
+.upiid{
+    margin: auto;
+    margin-left: 20px;
+}
+.upiid span{
+    margin: auto;
+    margin-right: 10px;
+    font: optional;
+    font-size: 20px;
+ 
+}
+.upiid input{
+    height: 30px;
+    width: 220px;
+    margin: auto;
+    margin-left: 10px;
+}
+.pay{
+    height: 40px;
+    width: 120px;
+    margin: auto;
+    margin-left: 190px;
+    margin-top: 80px;
+}
+.forpayment{
+height: auto;
+width: 500px;
+background-color: #f7f7f7;
+border: 2px solid #ccc;
+border-radius: 10px;
+}
+.payments{
+    margin: auto;
+    margin-top: 45px;
+    margin-left: 15px;
+}
+.qrcode{
+    height: 220px;
+    width: 220px;
+    margin: auto;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+.paynow{
+    margin: auto;
+    margin-left: 45%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+	section.selection-box {
+		flex-basis: calc(100% - 40px);
+		max-width: calc(100% - 40px);
+	}
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Hotel Login</title>
+    <script src="https://kit.fontawesome.com/cf17d1b09a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <div class = "container" >
+            <div class="top-header">
+                <br> 
+                <header>Login as Hotel</header>
+                <br>
+            </div> 
+
+            <form action="/HotelLogin" id="form" class="form" method="post">
+                <div class="input-field">
+                    <input type="email" class="input" placeholder="Email" required name="hemail">
+                    <i class="fa-solid fa-envelope" style="width: 5%;"></i>
+                </div> 
+
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Password" required name="hpwd">
+                    <i class="fa-solid fa-lock"></i>
+                    <small><span><%= sn %></span></small>
+                </div> 
+
+                <div class="input-field">
+                    <input type="submit" class="submit btn" value="Login">
+                </div>
+
+                <div class="bottom">
+                    <div class="left">
+                        <input type="checkbox" id="check">
+                        <label for="check"> Remember Me</label>
+                    </div>
+                    <div class="right">
+                        <label><a href="#">Forgot Password</a></label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

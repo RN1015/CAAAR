@@ -1,0 +1,137 @@
+* {
+	font-family: Arial, sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    background-color: rgb(247, 247, 247);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+p {
+    margin-bottom: 1rem;
+}
+section {
+    margin-bottom: 2rem;
+}
+a{
+    color: rgb(171, 171, 171);
+    text-decoration: none;
+}
+.main{
+    display: flex;
+}
+.main_left{
+    height: 100%;
+    width: 320px;
+    background-color: rgb(0, 4, 123);
+}
+.stat-card{
+    width: 200px;
+}
+.welcome{
+    height: 60px;
+    width: 600px;
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    margin-left: 250px;
+    border: 1px solid rgb(128, 128, 128);
+    box-shadow: 3px 6px rgb(169, 169, 169);
+	border-radius: 10px;
+}
+.welocme_left{
+    background-color: yellow;
+    width: 5px;
+}
+.welcome_right{
+margin: auto;
+margin: 15px 0px 10px 50px;
+}
+.welcome_right span{
+    margin: auto;
+    margin-left: 30px;
+}
+.main_right{
+    width: 1100px;
+    margin: auto;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.main_right1{
+    margin-top: 150px;
+    margin-left: 50px;
+}
+.admin_icon{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
+.stat-card{
+    
+    padding: 15px;;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px #ccc;
+    max-width: 600px;
+    margin: 50px auto;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+input[type="submit"]:hover {
+    background-color: #0069d9;
+}

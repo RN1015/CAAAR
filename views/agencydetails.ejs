@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../CSS/alldasb.css">
+</head>
+<body>
+    <center><h1 style="margin:40px 0px 40px 0px">Agency's Details</h1></center>
+    <% for(let i=0;i<docs.length;i++) { %>
+    <div class="container" style="display: inline-block;">
+        <div class="main" style="display: flex;">
+            <div class="content">
+                <img src="https://icon-library.com/images/tour-guide-icon/tour-guide-icon-1.jpg" alt="guide icon" class="icon">
+                <div style="display: flex;">
+                    <div class="content_left">
+                        <h2>Name</h2>
+                        <h2>Owner</h2>
+                        <h2>Email</h2>
+                        <h2>Transport</h2>
+                        <h2>Place</h2>
+                        <h2>Contact</h2>
+                      </div>
+                      <div class="content_right">
+                        <h2><%= docs[i].agencyname %></h2>
+                        <h2><%= docs[i].ownername %></h2>
+                        <h3><%= docs[i].email %></h3>
+                        <h2><%= docs[i].transporttype %></h2>
+                        <h2><%= docs[i].location %></h2>
+                        <h2><%= docs[i].contact %></h2>
+                      </div>
+                </div>
+                <div style="display:flex">
+                    <div>
+                        <button class="button" style="margin: 8px 8px 5px 50px; cursor:pointer">Remove travel agency</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%} %>
+
+    <script>
+        const block = document.querySelectorAll('.button')
+        for(let i=0;i<block.length;i++){
+        block[i].addEventListener('click',function(){
+            let b = block[i].parentElement.parentElement.parentElement.querySelector("h3").innerText
+            if(confirm("Do you want to remove the travel agency?")){
+            let Details = {
+                email : b
+            }
+            fetch("/removeagency",
+                    {
+                        method: "POST",
+                        headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(Details)
+                    })
+                    block[i].parentElement.parentElement.parentElement.parentElement.remove()
+                }
+        })
+        }
+    </script>
+    
+</body>
+</html>

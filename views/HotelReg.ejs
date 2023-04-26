@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Hotel</title>
+    <script src="https://kit.fontawesome.com/cf17d1b09a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <div class = "container" >
+            <div class="top-header">
+                <br> 
+                <header>Register as Hotel</header>
+                <br>
+            </div> 
+            <form action="/HotelReg" id = "form" class = "form" method="post">
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Hotel Name" required name="hname">
+                    <i class="fa-solid fa-hotel"></i>
+                </div> 
+
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Owner Name" required name="honame">
+                    <i class="fa-solid fa-user"></i>
+                </div> 
+                
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Contact Number" required name="hno">
+                    <i class="fa-solid fa-phone"></i>
+                </div> 
+
+                <div class="input-field">
+                    <label for="email"></label>
+                    <input type="email" class="input" placeholder="Mail ID" required id = "email" name="hemail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <small></small>
+                </div>
+                
+                <div class="input-field">
+                    <select class="input" required name="dropdown">
+                        <option value=" disabled selected">Location</option>
+                        <% for(let i=0;i<location.length;i++){ %>
+                            <option value = <%= location[i] %>><%= location[i]%></option>
+                        <% } %>
+                    </select>
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                </div> 
+
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Total Rooms" required name="trooms">
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+
+                <div class="input-field">
+                    <label for="password"></label>
+                    <input type="text" class="input" placeholder="Password" required id = "password" name="hpwd">
+                    <i class="fa-solid fa-lock"></i>
+                    <small></small>
+                </div>
+
+                <div class="input-field">
+                    <label for="passwordConfirm"></label>
+                    <input type="text" class="input" placeholder="Confirm Password" required id = "password2" name="cnfhpwd">
+                    <i class="fa-solid fa-lock"></i>
+                    <small></small>
+                </div>
+
+                <div class="input-field">
+                    <input type="submit" class="submit btn" value="Register">
+                </div>
+            </form>    
+        </div>
+    </div>
+</body>
+</html>

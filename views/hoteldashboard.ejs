@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+<body>
+	<div class="logout">
+		<a href="/hotellogout"><button class="button" style="cursor:pointer">Logout</button></a>
+	</div>
+	<div class="welcome">
+		<div class="welocme_left"></div>
+		<div class="welcome_right">
+		  <h1>Welcome <span style="font-family:'Times New Roman', Times, serif; "><%= name %></span></h1>
+		</div>
+	</div>
+	
+		<form action="/hoteldashboard" method="post">
+			<div class="content">
+				<div class="main">
+					<div class="content_left"><br>
+						<label for="">Hotel Name</label><br>
+						<input type="text" name="hotelname" value= <%= name %>><br>
+						<label for="">Owner Name</label><br>
+						<input type="text" name="owner" value= <%= owner %>><br>
+						<label for="">Email</label><br>
+						<input type="mail" name="oemail" value= <%= mail %>><br>
+						
+					</div>
+					<div class="content_right"><br>
+						<label for="">Rooms available</label><br>
+						<input type="text" name="rooms" value= <%= rooms %>><br>
+						<label for="">Place</label><br>
+						<input type="text" name="location" value= <%= loc %>><br>
+						<label for="">Contact</label><br>
+						<input type="text" name="phoneno" value= <%= phoneno %>><br>
+					</div>
+				</div>
+				<button type="submit" class="submit">Edit</button>
+			</div>
+		</form>
+	
+	<div class="container">
+			<div class="header">
+				<h1>Dashboard</h1>
+			  </div>
+	   <div class="main1">
+			  <center><div class="content1" style="height: auto;">
+				<div class="card" style="height: auto;">
+				  <center><h1>Your Bookings</h1></center><hr>
+				  <% for(let i=0;i<result.length;i++) { %>
+					<P><u>USER</u></P>
+					<p><%= result[i].username %></p>
+					<p><%= result[i].email %></p>
+					<p><%= result[i].booking[0].date %></p>
+				  <% } %>
+				</div></center>
+			  </div>
+		</div>
+	</div>
+</body>
+</html>

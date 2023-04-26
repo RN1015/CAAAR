@@ -1,0 +1,92 @@
+[
+    {
+      "guideName": "Anitha",
+      "dob": "1985-07-12",
+      "contact": "9876543210",
+      "email": "anitha@gmail.com",
+      "password": "anithapass",
+      "location": "Munnar",
+      "language": "Malayalam"
+    },
+    {
+      "guideName": "Arjun",
+      "dob": "1990-03-19",
+      "contact": "9876543211",
+      "email": "arjun@gmail.com",
+      "password": "arjunpass",
+      "location": "Coorg",
+      "language": "Kannada"
+    },
+    {
+      "guideName": "Bhavana",
+      "dob": "1995-11-05",
+      "contact": "9876543212",
+      "email": "bhavana@gmail.com",
+      "password": "bhavanapass",
+      "location": "Ooty",
+      "language": "Tamil"
+    },
+    {
+      "guideName": "Chandru",
+      "dob": "1988-02-23",
+      "contact": "9876543213",
+      "email": "chandru@gmail.com",
+      "password": "chandrpass",
+      "location": "Kodaikanal",
+      "language": "Tamil"
+    },
+    {
+      "guideName": "Deepak",
+      "dob": "1987-09-30",
+      "contact": "9876543214",
+      "email": "deepak@gmail.com",
+      "password": "deepakpass",
+      "location": "Hampi",
+      "language": "Kannada"
+    },
+    {
+      "guideName": "Divya",
+      "dob": "1992-06-08",
+      "contact": "9876543215",
+      "email": "divya@gmail.com",
+      "password": "divyapass",
+      "location": "Mahabalipuram",
+      "language": "Tamil"
+    },
+    {
+      "guideName": "Ganesh",
+      "dob": "1994-01-15",
+      "contact": "9876543216",
+      "email": "ganesh@gmail.com",
+      "password": "ganeshpass",
+      "location": "Hampi",
+      "language": "Kannada"
+    },
+    {
+      "guideName": "Harish",
+      "dob": "1989-08-17",
+      "contact": "9876543217",
+      "email": "harish@gmail.com",
+      "password": "harishpass",
+      "location": "Coorg",
+      "language": "Kannada"
+    },
+    {
+      "guideName": "Jagan",
+      "dob": "1993-04-03",
+      "contact": "9876543218",
+      "email": "jagan@gmail.com",
+      "password": "jaganpass",
+      "location": "Munnar",
+      "language": "Malayalam"
+    },
+    {
+      "guideName": "Kavya",
+      "dob": "1991-11-20",
+      "contact": "9876543219",
+      "email": "kavya@gmail.com",
+      "password": "kavyapass",
+      "location": "Ooty",
+      "language": "Tamil"
+    }
+]  

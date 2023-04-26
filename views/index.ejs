@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PackYourBags</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "../font/fonts.css">
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "../CSS/utility.css">
+        <link rel = "stylesheet" href = "../CSS/style.css">
+        <link rel = "stylesheet" href = "../CSS/notice.css">
+        <link rel = "stylesheet" href = "../CSS/responsive.css">
+        <script src="https://kit.fontawesome.com/9953d91f04.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- navbar  -->
+        <% if(x) { %>
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "/" class = "site-brand">
+                    Pack<span>UrBags</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "/" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "/planTour" class = "nav-link">Plan Tour</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "/join" class = "nav-link">Join us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "/contact" class = "nav-link">Contact</a>
+                        </li>
+                        <li class = "nav-item dropdown"><i class="fa-solid fa-user dropbtn"></i>
+                            <!-- <button class="dropbtn" style="color: none;"></button> -->
+                            <div class="dropdown-content1">
+                                <a href="/register">Register</a><br>
+                                <a href="/Login">Login</a>
+                            </div>
+                            <!-- <a href = "/register" class = "nav-link"></a></a> -->
+                        </li>
+                        <!-- <li>
+                            <i class="fa-solid fa-user"></i>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <% } %>
+        <% if(!x) { %>
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "/" class = "site-brand">
+                    Pack<span>UrBags</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "/" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "/planTour" class = "nav-link">Plan Tour</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "/join" class = "nav-link">Join us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "/contact" class = "nav-link">Contact</a>
+                        </li>
+                        <li class = "nav-item dropdown"><i class="fa-solid fa-user dropbtn"></i>
+                            <div class="dropdown-content1">
+                                <a href="/dashboard">Dashboard</a><br>
+                                <a href="/logout">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <% } %>
+
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class = "flex">
+            <div class = "container">
+                <section class="notice green"><h1><%= docs[0].adminannouncement%></h1></section>
+                <div class = "header-title">
+                    <h1>Explore the innerself</h1>
+                    <p>Welcome to Pack Your Bags</p>
+                </div>
+                <a href="/planTour"><button type="button" class="btn btn4">Get your desired destination</button></a>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- featured section -->
+        <section id = "featured" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">know about some places before your travel</span>
+                    <h2 class = "lg-title">featured places</h2>
+                </div>
+
+                <div class = "featured-row">
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "photoset1/Coorg.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Coorg, Karnataka
+                            </span>
+                            <div>
+                                <p class = "text">Coorg is located in amidst imposing mountains  Karnataka with a perpetually misty landscape. It is popular for its beautiful green hills and the streams cutting right through them.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "photoset2/Jagdalpur.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Jagdalpur, Chattisgarh
+                            </span>
+                            <div>
+                                <p class = "text">Jagdalpur is a beautiful and naturally bountiful city in the Bastar district of Chhattisgarh and is one of the most popular tourist destinations in the state after Raipur and Bhilai.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "photoset1/Tirupati.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Tirumala, Andhra Pradesh
+                            </span>
+                            <div>
+                                <p class = "text">The city is home to the important Hindu shrine 'Tirumala Venkateswara Temple' and other historic temples and is referred to as the 'Spiritual Capital of Andhra Pradesh'</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "photoset1/North Goa.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                North Goa, Goa
+                            </span>
+                            <div>
+                                <p class = "text">It is known for its crowded beaches, upbeat nightlife, Goan trance, cosmopolitan cuisine and yoga retreats. It is dotted with majestic forts, beautiful cathedrals and flea markets.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "photoset1/Pondicherry.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Pondicherry, Tamil Nadu
+                            </span>
+                            <div>
+                                <p class = "text">Also known as Puducherry, this is an ideal place for explorers, beach lovers, and interested in French culture and architecture. With an extensive number of romantic places.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "photoset1/Rishikesh.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Rishikesh, Himachal Pradesh
+                            </span>
+                            <div>
+                                <p class = "text">Located in the foothills of the Himalayas along the convergence of Ganga and Chandrabhaga River.It is Gateway to Garhwal Himalayas, It is also a pilgrimage and holiest places for Hindus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of featured section -->
+
+        <!-- services section -->
+        <section id = "services" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title" style="font-weight: 550;">why choose us?</span>
+                    <h2 class = "lg-title">we provide</h2>
+                </div>
+
+                <div class = "services-row">
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <h3>Travel Guide</h3>
+                        <p class = "text">We provide tourists with guides according to their language preferences</p>
+                    </div>
+
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-hotel"></i>
+                        </span>
+                        <h3>Luxurious Hotel</h3>
+                        <p class = "text">We provide tourists with world class hotels and cuisines</p>
+                    </div>
+
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </span>
+                        <h3>Reasonable Price</h3>
+                        <p class = "text">All the packages are priced at reasonable and affordable rates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of services section -->
+        
+        <!-- footer -->
+        <footer class = "py-4">
+            <div class = "container footer-row">
+                <div class = "footer-item">
+                    <h2>Quick Links</h2>
+                    <ul class = "quick-links">
+                        <li>
+                            <a href = "/">
+                            Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "/PlanTour">
+                                Plan tour
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "/join">
+                                Join
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "/contact">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates maiores nam vitae iusto. Placeat rem sint voluptas natus exercitationem autem quod neque, odit laudantium reiciendis ipsa suscipit veritatis voluptate.</p> -->
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Social media handles </h2>
+                    <ul class = "social-links">
+                        <li>
+                            <a href = "/">
+                                <i class = "fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "/">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "/">
+                                <i class = "fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "/">
+                                <i class = "fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "/">
+                                <i class = "fab fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li>Group 11</li>
+                        <li>+91 8093823499</li>
+                        <li>Gyan Marg 630, IIIT Sricity</li>
+                        <li>Chittoor, AndhraPradesh</li>
+                    </ul>
+                </div>
+
+                <div class = "subscribe-form footer-item">
+                    <h2>Subscribe for Notifications</h2>
+                    <form class = "flex">
+                        <input type = "email" placeholder="Enter Email" class = "form-control">
+                        <input type = "submit" class = "btn" value = "Subscribe">
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+
+        <!-- js -->
+        <script src = "../script.js"></script>
+    </body>
+</html>
