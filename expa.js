@@ -1,6 +1,6 @@
 const express =require('express');
 const packages=require('./public/packages')
-const app=express();
+const app=express()
 const nodemailer = require('nodemailer');
 const Place = require(__dirname+'/models/place.js');
 const Feedback = require(__dirname+'/models/feedback.js');
