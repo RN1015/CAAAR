@@ -199,7 +199,7 @@ app.get('/booking',isAuthorised,(req,res)=>{
          Hotel.find({location:placer})
          .then((data3)=>{ 
            hotel = data3;
-           console.log(guide[0].guide_name)
+        //    console.log(guide[0].guide_name)
            res.render('booking',{title:'booking',x:x,guide:guide,agency:agency,hotel:hotel});
            
 
