@@ -1,6 +1,6 @@
 const express =require('express');
 const packages=require('./public/packages')
-const app=express()
+const app=express();
 const nodemailer = require('nodemailer');
 const Place = require(__dirname+'/models/place.js');
 const Feedback = require(__dirname+'/models/feedback.js');
@@ -29,7 +29,6 @@ let ep=""; // entry of password
 let cep=""; //confirm entry of password
 let eae=""; 
 let sn=""; //incorrect login credentiatls
-let y = "Pendiing"
 let emails=[];
 const bcrypt = require('bcryptjs');
 const { ObjectId } = require('mongodb');
@@ -199,7 +198,7 @@ app.get('/booking',isAuthorised,(req,res)=>{
          Hotel.find({location:placer})
          .then((data3)=>{ 
            hotel = data3;
-        //    console.log(guide[0].guide_name)
+           console.log(guide[0].guide_name)
            res.render('booking',{title:'booking',x:x,guide:guide,agency:agency,hotel:hotel});
            
 
@@ -319,9 +318,8 @@ app.get('/dashboard',isAuthorised, (req,res)=>{
       mail=valuex[0]['email'];
       Slot.find({username:value[0].username})
       .then((data)=>{
-        //  console.log(data)
-         
-        //  console.log(data[0].status);
+         console.log(data)
+         console.log(value[0].username)
          res.render('dashboard',{ title:'Dashboard',x:x,name:uname,p:phone,mail:mail,data});
      })
 })
@@ -409,7 +407,6 @@ app.post('/guidedashboard',(req,res)=>{
       .then((result)=>{
         console.log(result[0].email);
         const email=result[0].email;
-        // Slot.findOneAndUpdate({ email:gid }, { $set: { guide_name:username,DOB:gdob,contact:phone,email:email,location:location,language:guidelanguage } })
 
         let mailtransporter=nodemailer.createTransport({
             service:"gmail",
@@ -422,8 +419,8 @@ app.post('/guidedashboard',(req,res)=>{
           let details={
             from:"packyourbags@gmail.com",
             to:email,
-            subject:"Your journey is Accepted",
-            text:"Your journey has been confirmed on the date on the date : "+result[0].booking[0].date
+            subject:"Your journey is declined",
+            text:"Your journey is not possible on the date : "+result[0].booking[0].date+"to the place"+result[0].place_name
           }
           mailtransporter.sendMail(details,(err)=>{
             if(err)
@@ -434,10 +431,20 @@ app.post('/guidedashboard',(req,res)=>{
               console.log('email has sent');
               res.redirect('/guidedashboard');
            }
-           y = "Confirmed"
         })
       })
   })
+
+
+  app.get('/dashboard/invite/:mail/:guide',async (req,res)=>{
+    await Slot.findOneAndDelete({email:req.params.mail,booking:{
+        $elemMatch:{
+            guide:guide
+        }
+    }})
+    res.json({ok:'One'});
+  })
+  
 
 
 
